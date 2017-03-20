@@ -1,12 +1,12 @@
 import base from '../css/base.css';
 import {routerSetup} from './common/setup/routerSetup/routerSetup';
-routerSetup.$inject = ['$stateProvider', '$urlRouterProvider'];
+  routerSetup.$inject = ['$stateProvider', '$urlRouterProvider'];
 import {runSetup} from './common/setup/runSetup/runSetup';
-runSetup.$inject = ['$state', '$rootScope', 'AuthService'];
+  runSetup.$inject = ['$state', '$rootScope', 'AuthService'];
 import {GetDataService} from './common/services/GetDataService/GetDataService';
-GetDataService.$inject = ['$http'];
+  GetDataService.$inject = ['$http'];
 import {AuthService} from './common/services/AuthService/AuthService';
-AuthService.$inject = ['$q', 'GetDataService'];
+  AuthService.$inject = ['$q', 'GetDataService'];
 import {uniqueEmailFactory} from './components/uniqueEmail/uniqueEmail';
 import {validEmailFactory} from './components/validEmail/validEmail';
 import {loginComponent} from './components/login/login';

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "node_modules\\.bin\\webpack && static && start http://localhost:8080/dist"
+    "postinstall": "node_modules\\.bin\\webpack && static",
+    "start": "start http://localhost:8080/dist"
   },
   "author": "AndreyM",
   "license": "ISC",
