@@ -9,10 +9,10 @@
  
 ### Установка
 ```
-$ git clone https://github.com/AndreyJS/andreyjs.github.io
-$ cd andreyjs.github.io
+$ git clone https://github.com/AndreyJS/mailbox
+$ cd mailbox
 $ npm install
-После установки развернется статический сервер. Приложение станет доступно по адресу http://localhost:8080/dist
+После установки развернется статический сервер. Приложение станет доступно по адресу [localhost:8080/dist](http://localhost:8080/dist)
 ```
 
 ### Авторизация в приложении 
@@ -29,8 +29,8 @@ $ npm install
  * При создании письма поле "кому" автодополнение по почтовым адресам пользователей из адресной книги. 
 
 ### Адресная книга
-![contacts](https://cldup.com/vfheMWt39Y.png)
-![newUser](https://cldup.com/G3kP16J_Wa.png)
+![contacts](https://cldup.com/vfheMWt39Y.png =960x)
+![newUser](https://cldup.com/G3kP16J_Wa.png =960x)
  * Список пользователей 
  * Возможность добавляния новых пользователей и редактирование данных + валидация поля "email" 
  * Возможность удаления пользователя 
