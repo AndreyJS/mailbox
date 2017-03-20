@@ -12,8 +12,8 @@
 $ git clone https://github.com/AndreyJS/mailbox
 $ cd mailbox
 $ npm install
-После установки развернется статический сервер. Приложение станет доступно по адресу [localhost:8080/dist](http://localhost:8080/dist)
 ```
+После установки развернется статический сервер. Приложение станет доступно по адресу [localhost:8080/dist](http://localhost:8080/dist)
 
 ### Авторизация в приложении 
 ![authorize](https://cldup.com/kc5RGeEAC0.png)
