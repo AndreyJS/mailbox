@@ -29,8 +29,8 @@ $ npm install
  * При создании письма поле "кому" автодополнение по почтовым адресам пользователей из адресной книги. 
 
 ### Адресная книга
-<img src="https://cldup.com/vfheMWt39Y.png" width="100" />
-![contacts](https://cldup.com/vfheMWt39Y.png | width=100) ![newUser](https://cldup.com/G3kP16J_Wa.png)
+<img src="https://cldup.com/vfheMWt39Y.png" width="400" />
+<img src="https://cldup.com/G3kP16J_Wa.png" width="400" />
  * Список пользователей 
  * Возможность добавляния новых пользователей и редактирование данных + валидация поля "email" 
  * Возможность удаления пользователя 
