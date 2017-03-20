@@ -1,0 +1,16 @@
+<form class="formIn">
+	<label for="name">Имя ящика</label><br>
+	<input type="text" name="name" ng-model="$ctrl.namebox"/><br><br>
+	<label for="name">Пароль</label><br>
+	<input type="password" name="pass" ng-model="$ctrl.password"/>
+	<div ng-if="$ctrl.errorAuth">{{$ctrl.errorAuth}}</div>
+	<br><br><br>
+	<input type="button" value="Войти" ng-click="$ctrl.enter($ctrl.namebox, $ctrl.password)"/>
+	<label ng-click="$ctrl.toggleShowBox()">{{$ctrl.valueShow}} ящики</label>
+</form>
+<ul class="listbox" ng-show="$ctrl.listbox.length">
+	<li ng-repeat="item in $ctrl.listbox" ng-click="$ctrl.setBox(item.namebox, item.password)">
+		Имя ящика:{{item.namebox}} Пароль:{{item.password}}
+		</li>
+</ul>
+<a href="https://github.com/AndreyJS/andreyjs.github.io"><img class="git" ng-src="./img/github.png"></a>

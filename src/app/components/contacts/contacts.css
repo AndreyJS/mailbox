@@ -1,0 +1,53 @@
+/*
+------// contacts //-------------
+*/
+
+contacts > div {
+	padding: 1em 0.75em;
+	color: #21253B;
+	background-color: rgba(230, 230, 230, 0.75);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+contacts > div:hover {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+contacts > div > input {
+	float: left;
+	margin-right: 1em;
+	width: 1%;
+}
+
+contacts .icon {
+	position: relative;
+	top: -0.75em;
+	float: left;
+	margin-right: 1em;
+	width: 2.5em;
+	border-radius: 1.25em;	
+}
+
+contacts .icontext {
+	display: inline-block;
+	position: relative;
+	top: -0.75em;
+	float: left;
+	margin-right: 1em;
+	width: 2.5em;
+	line-height: 2.5em;	
+	text-align: center;
+	color: white;
+	border-radius: 1.25em;	
+}
+
+contacts .name, 
+contacts .email,
+contacts .space,
+contacts .phone {
+	float: left;
+	margin-right: 0.5em;
+	width: 20%;
+	overflow: hidden;
+}

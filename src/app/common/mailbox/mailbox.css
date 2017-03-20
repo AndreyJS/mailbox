@@ -1,0 +1,232 @@
+/*
+------// mailbox //-------------
+*/
+.header {
+	margin: 0;
+	padding: 0.5em 1.5em;
+	height: 3em;
+	border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+}
+
+.myMail {
+	float: left;
+	padding-top: 0.4em;
+	width: 11em;
+	cursor: pointer;
+}
+
+.myMail > span {
+	width: 80%;
+	font-size: 1.5em;
+}
+
+.myMail:after {
+	font-size: 12px;
+	content: "▼";
+}
+
+.myMail:focus {
+	outline: none;
+}
+
+.minimenu {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 6em;
+	background-color: rgba(230, 230, 230, 1);
+	list-style-type: none;
+}
+
+.minimenu > li {
+	padding: 0.5em;
+	color: #21253B;
+	transition: 0.2s 
+}
+
+.minimenu > li:hover {
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.inputFind {
+	margin: 0.5em 0;
+	width: 50em;
+	height: 2em;
+}
+
+.inputFind:focus {
+	outline: none;
+}
+
+.avatar {
+	position: absolute;
+	z-index: 2;
+	top: 0.73em;
+	right: 0.75em;
+	cursor: pointer;
+}
+
+.logout {
+	position: relative;
+	top: -1.25em;
+	right: 0.75em;
+	width: 8.5em;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.logout:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.logout:focus {
+	outline: none;
+}
+
+.avatar img {
+	width: 2.5em;
+	border-radius: 1.25em; 
+}
+
+.avatar:focus {
+	outline: none;
+}
+
+.avatar .listbox {
+	position: absolute;
+	top: 2.75em;
+	right: 0;
+	width: 12em;
+	font-family: roboto light;
+	font-size: 14px;
+	color: #102447;
+	
+	list-style-type: none;
+}
+
+.avatar .listbox > li {
+	padding: 10px;
+	background-color: rgba(245, 245, 245, 1); 
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.avatar .listbox > li:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+/*
+------// menu //-------------
+*/
+
+.menu {
+	float: left;
+	width: 14em;
+	height: 20em;
+	font-size: 14px;
+}
+
+.menu > button {
+	margin-left: 1.5em;
+	padding: 0.5em 1em;
+	border: 1px solid #1d4214;
+	border-radius: 3px;
+	background: linear-gradient(to top, #2a5b1c, #337322);
+	width: 10em;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+}
+
+.menu > button:hover {
+	background: linear-gradient(to top, #27551a, #2f6a20);
+}
+
+.menu > button:focus {
+	outline: none;
+}
+
+.menu > ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu > ul > li {
+	padding: 0.4em 1.5em;
+	margin-right: 1em;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.menu > ul > li:hover {
+	color: white;
+	background-color: rgba(230, 230, 230, 0.3);
+}
+
+.menu .active {
+	color: #21253B;
+	background-color: rgba(230, 230, 230, 0.75);
+}
+
+/*
+------// options //-------------
+*/
+
+.options {
+	float: left;
+	margin-left: 0.25em;
+	padding: 1em 0;
+	width: 10em;
+	height: 2em;
+}
+
+.trash, .addContact {
+	float: left;
+	width: 3em;
+	height: 2em;
+	margin-right: 0.5em;
+	cursor: pointer;
+}
+
+.trash:hover, .addContact:hover {
+	background-color: rgba(230, 230, 230, 1);
+}
+
+.trash {	
+	background: url('../img/trash.png') rgba(230, 230, 230, 0.75) center no-repeat;
+}
+
+.addContact {
+	background: url('../img/addContact.png') rgba(230, 230, 230, 0.75) center no-repeat;
+}
+
+.trash:hover, .addContact:hover {
+	background-color: rgba(230, 230, 230, 1);
+}
+
+/*
+------// mails //-------------
+*/
+
+.mails {
+	overflow-y: scroll;
+	position: fixed;
+	z-index: 1;
+	top: 129px;
+	left: 200px;
+	right: 5px;
+	bottom: 5px;
+}
+
+.unread {
+	font-weight: bold;
+}
+
+/*
+------// messages //-------------
+*/
+
+.ng-active {
+	color: #990000;
+	font-size: 0.8em;
+}

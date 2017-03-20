@@ -1,0 +1,21 @@
+<div class="mail" ng-if="$ctrl.oneMail">
+	<img class="icon" ng-if="$ctrl.icon" ng-src="{{$ctrl.icon}}">
+	<span class="icontext" ng-style="{'background-color': $ctrl.color || 'rgba(0,0,0,0.5)'}" ng-if="!$ctrl.icon">{{$ctrl.alias.charAt(0).toUpperCase() || $ctrl.mail.email.charAt(0).toUpperCase()}}</span>
+	<span style="float: right">{{$ctrl.mail.date | dateFilter}}</span>
+	<span style="display: inline-block; margin-top: 0.5em">
+		<span ng-if="$ctrl.alias"><b>{{$ctrl.alias}}</b>&nbsp;<{{$ctrl.mail.from}}></span>
+		<span ng-if="!$ctrl.alias">{{$ctrl.mail.from}}</span><br><br>
+	</span>
+	<br>
+	<span><b>{{$ctrl.mail.theme}}</b></span><br><br>
+	<span>{{$ctrl.mail.text}}</span>
+</div>
+<div ng-class="$ctrl.unread" ng-if="!$ctrl.oneMail">
+	<input type="checkbox" ng-click="$ctrl.changeArrChecked({index: $ctrl.mail.id})"/>
+	<span ng-click="$ctrl.openMail({index: $ctrl.mail.id})">
+		<span class="email">{{$ctrl.alias || $ctrl.mail.from}}</span>
+		<span class="theme">{{$ctrl.mail.theme}} - <span class="text">{{$ctrl.mail.text}}</span></span>
+		<span class="date">{{$ctrl.mail.date | dateFilter}}</span>
+		<br>
+	</span>
+<div>

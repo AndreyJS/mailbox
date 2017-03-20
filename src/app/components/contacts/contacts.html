@@ -1,0 +1,14 @@
+<div>
+	<input type="checkbox" ng-click="$ctrl.changeArrChecked({index: $ctrl.contact.id})"/>
+	<span ng-click="$ctrl.editContact()">
+	<img class="icon" ng-if="$ctrl.contact.photo" ng-src="{{$ctrl.contact.photo}}">
+	<span class="icontext" ng-style="{'background-color': $ctrl.contact.color}" ng-if="!$ctrl.contact.photo">
+		{{$ctrl.contact.name.charAt(0).toUpperCase() || $ctrl.contact.email.charAt(0).toUpperCase()}}</span>
+		<span class="name" ng-if="$ctrl.contact.name">{{$ctrl.contact.name}}</span>
+		<span class="space" ng-if="!$ctrl.contact.name">&nbsp;</span>
+		<span class="email">{{$ctrl.contact.email}}</span>
+		<span class="space" ng-if="!$ctrl.contact.email">&nbsp;</span>
+		<span class="phone">{{$ctrl.contact.phone}}</span>
+		<br>
+	</span>
+<div>

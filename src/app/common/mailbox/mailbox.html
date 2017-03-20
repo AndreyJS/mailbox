@@ -1,0 +1,62 @@
+<div class="header">
+	<div class="myMail" tabIndex="0" ng-click="$ctrl.toShowMiniMenu()" ng-blur="$ctrl.isMiniMenu=false;">
+		<span>{{$ctrl.typeBox}}</span>
+		<ul class="minimenu" ng-if="$ctrl.isMiniMenu">
+			<li ng-click="$ctrl.toggleTypeBox('myMail')">myMail</li>
+			<li ng-click="$ctrl.toggleTypeBox('Контакты')">Контакты</li>
+		</ul>
+	</div>				
+
+	<input class="inputFind" type="text" ng-model="$ctrl.find" ng-model-options="{ debounce: 500 }"/>
+
+	<div class="avatar" tabIndex="0" ng-click="$ctrl.toggleAvatar()" ng-blur="$ctrl.onBlur()">
+		<input class="logout" type="button" value="Выйти" ng-if="$ctrl.listbox.length" ng-click="$ctrl.logout($ctrl.namebox)"/>
+		<img ng-src="{{$ctrl.mails[0].photo || './img/photo/avatar.png'}}" >
+		<ul class="listbox" ng-if="$ctrl.listbox.length">
+			<li ng-repeat="item in $ctrl.listbox" ng-click="$ctrl.setBox(item.namebox)">
+				Имя ящика: {{item.namebox}}
+			</li>
+		</ul>
+	</div>
+</div>		
+
+<div class="menu">
+	<br>
+	<button ng-click="$ctrl.createMail()">НАПИСАТЬ</button>
+	<ul>
+		<li ng-class="$ctrl.active[1]" ng-click="$ctrl.setViewMails($ctrl.mails, 1)">Входящие</li>
+		<li ng-class="$ctrl.active[2]" ng-click="$ctrl.setViewMails($ctrl.mails, 2)">Отправленные</li>
+		<li ng-class="$ctrl.active[3]" ng-click="$ctrl.setViewMails($ctrl.mails, 3)">Черновики</li>
+		<li ng-class="$ctrl.active[4]" ng-click="$ctrl.setViewMails($ctrl.mails, 4)">Спам</li>
+	</ul>
+</div>
+
+<div class="options">
+	<div class="addContact" ng-if="$ctrl.showContacts" ng-click="$ctrl.showNewContact()"></div>
+	<div class="trash" ng-if="$ctrl.arrChecked.length" ng-click="$ctrl.delMails()"></div>
+</div>		
+
+<div class="mails">
+	<mail class="oneMail" ng-if="$ctrl.showMail" one-mail="$ctrl.showMail" mail="$ctrl.showMail" contacts="$ctrl.contacts"></mail>
+
+	<mail class="listMails" ng-if="!$ctrl.showMail && !$ctrl.showContacts" 
+		  ng-repeat="mail in $ctrl.viewMails | filter:$ctrl.find" 
+		  contacts="$ctrl.contacts" mail="mail" open-mail="$ctrl.openMail(index)" 
+		  change-arr-checked="$ctrl.changeArrChecked(index)">
+	</mail>
+
+	<contacts ng-if="$ctrl.showContacts" 
+		  ng-repeat="contact in $ctrl.contacts | filter:$ctrl.find"
+		  edit-contact="$ctrl.editContact($index)"
+		  contact="contact"
+		  change-arr-checked="$ctrl.changeArrChecked(index)">
+	</contacts>
+
+	<h3 ng-if="!$ctrl.viewMails.length">Писем нет</h3>
+</div>
+
+<new-mail ng-if="$ctrl.isNewMail" is-new-mail="$ctrl.isNewMail" contacts="$ctrl.contacts" send-mails="$ctrl.mails[2]"></new-mail>
+
+<new-contact ng-if="$ctrl.isNewContact" is-new-contact="$ctrl.isNewContact" contact="$ctrl.contact" contacts="$ctrl.contacts"></new-contact>
+
+<a href="https://github.com/AndreyJS/andreyjs.github.io"><img class="git" ng-src="./img/github.png"></a>

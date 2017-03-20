@@ -1,0 +1,18 @@
+<form class="contact" name="editContact" ng-submit="$ctrl.saveContact()" novalidate>
+	<img class="icon" ng-if="$ctrl.contact.photo" ng-src="{{$ctrl.contact.photo}}">
+	<label class="icontext" ng-style="{'background-color': $ctrl.contact.color || $ctrl.color}" ng-if="!$ctrl.contact.photo">
+		<span>{{$ctrl.contact.name.charAt(0).toUpperCase() || $ctrl.contact.email.charAt(0).toUpperCase()}}</span>
+	</label>
+	<input class="name" type="text" name="name" ng-model="$ctrl.editContact.name" ng-focus="$ctrl.onFocus('name', 'Имя')" ng-blur="$ctrl.onBlur('name', 'Имя')"/><br>
+	<input class="email" type="email" name="email" required unique-email ng-model="$ctrl.editContact.email" ng-focus="$ctrl.onFocus('email', 'email')" ng-blur="$ctrl.onBlur('email', 'email')"/><br>
+	<span ng-messages="editContact.email.$touched && editContact.email.$error">
+		<span ng-message="email">допустимый формат: имя@домен</span>
+		<span ng-message="required">поле не заполнено</span>
+		<span ng-if="!$ctrl.contact" ng-message="unique">не уникальный email</span>
+	</span>
+	<input class="phone" type="text" name="phone" ng-model="$ctrl.editContact.phone" ng-focus="$ctrl.onFocus('phone', 'Телефон')" ng-blur="$ctrl.onBlur('phone', 'Телефон')"/><br>
+	<div class="control">
+		<input type="submit" value="Сохранить"/>
+		<input type="button" value="Отмена" ng-click="$ctrl.cancel()"/>
+	</div>
+</form>

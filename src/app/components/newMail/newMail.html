@@ -1,0 +1,21 @@
+<form class="newMail" name="newMail" ng-submit="$ctrl.sendMail()">				
+	<div class="header">
+		<label>Новое письмо</label>
+		<span class="cancel" ng-click="$ctrl.isNewMail = null">x</span>
+			<input type="submit"/>
+	</div>
+	<div class="body">
+		<input type="text" name="email" required unique-email valid-email ng-model="$ctrl.mail.email" ng-focus="$ctrl.onFocus('email', 'Кому')" 
+		ng-blur="$ctrl.onBlur('email', 'Кому')" ng-change="$ctrl.isListContacts = $ctrl.mail.email ? true : false;">
+		<span ng-messages="newMail.email.$dirty && newMail.email.$error">
+			<span ng-message="required">поле не заполено</span>
+			<span ng-message="validEmail">формат: имя@домен</span>
+		</span>
+		<br>
+		<list-emails ng-if="$ctrl.isListContacts" email="$ctrl.mail.email" contacts="$ctrl.contacts" set-email="$ctrl.setEmail(email)">
+		</list-emails>
+		<input type="text" name="theme" value="Тема" ng-model="$ctrl.mail.theme" ng-focus="$ctrl.onFocus('theme', 'Тема')" 
+		ng-blur="$ctrl.onBlur('theme', 'Тема')"/><br>
+		<textarea name="text" ng-model="$ctrl.mail.text"></textarea><br>
+	</div>
+</form>

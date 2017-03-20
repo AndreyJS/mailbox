@@ -1,0 +1,70 @@
+/*
+------// new mail //-------------
+*/
+
+.newMail {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	right: 1.5em;
+	width: 35em;
+	height: 28em;
+	font-size: 0.85em;
+	font-family: roboto light;
+	background-color: #eeeeee;
+}
+
+.newMail .header {
+	height: 1.5em;
+	padding: 0.5em 0.75em;
+	background-color: #404040;
+}
+
+.header input[type="submit"] {
+	float: right;
+	height: 1.3em;
+	cursor: pointer;
+}
+
+.header .cancel {
+	display: inline-block;
+	float: right;
+	margin-left: 0.5em;
+	width: 2em;
+	height: 1.3em;
+	color: #404040;
+	background-color: rgba(255, 255, 255, 0.75);	
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.header .cancel:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.newMail .body {
+	background-color: white;
+	color: #404040;
+}
+
+.body input, .body textarea {
+	padding: 0.5em 0.5em;
+	width: 34.75em;
+	border-bottom: 1px solid rgba(65, 65, 65, 0.5);
+}
+
+.body textarea {
+	resize: none;
+	height: 20em;
+	border: none;
+}
+
+.body .ng-active {
+	position: absolute;
+	top: 4em;
+	right: 1em;
+	float: right;
+	color: #990000;
+	font-size: 0.8em;
+}
