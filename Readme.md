@@ -12,7 +12,7 @@
 $ git clone https://github.com/AndreyJS/andreyjs.github.io
 $ cd andreyjs.github.io
 $ npm install
-После установки развернется статический сервер. Приложение станет доступно по адресу (http://localhost:8080/dist)
+После установки развернется статический сервер. Приложение станет доступно по адресу http://localhost:8080/dist
 ```
 
 ### Авторизация в приложении 
