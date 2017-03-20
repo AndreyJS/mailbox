@@ -8,6 +8,7 @@
  * Юнит-тесты: [karma](https://karma-runner.github.io/1.0/index.html) & [jasmine](https://jasmine.github.io/)
  
 ### Установка
+Предварительно необходимо установить [Git](https://git-scm.com/) и [Node.js](https://nodejs.org/en/)
 ```
 $ git clone https://github.com/AndreyJS/mailbox
 $ cd mailbox
