@@ -11,6 +11,7 @@
 Предварительно необходимо установить [Git](https://git-scm.com/) и [Node.js](https://nodejs.org/en/)
 ```
 $ git clone https://github.com/AndreyJS/mailbox
+//test
 $ cd mailbox
 $ npm install
 ```
